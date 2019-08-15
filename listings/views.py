@@ -9,7 +9,7 @@ def index(request):
     page = request.GET.get('page')
     paged_listings = paginator.get_page(page)
     context = {
-        'listings' : paged_listings
+        'listings' : paged_listings,
     }
 
     return render(request, 'listings/listings.html', context)
